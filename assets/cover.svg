@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="640" viewBox="0 0 1400 640" role="img" aria-label="GSAP Scroll Trigger — motion study">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d0b08"/><stop offset="1" stop-color="#111014"/></linearGradient>
+<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ffb86b"/><stop offset=".55" stop-color="#ff9b52"/><stop offset="1" stop-color="#9b87f5"/></linearGradient>
+<radialGradient id="glow" cx="74%" cy="42%" r="58%"><stop stop-color="#ff9b52" stop-opacity=".22"/><stop offset="1" stop-color="#ff9b52" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".025"/></pattern>
+</defs>
+<rect width="1400" height="640" rx="32" fill="url(#bg)"/><rect width="1400" height="640" rx="32" fill="url(#grid)"/><rect width="1400" height="640" rx="32" fill="url(#glow)"/><rect x="1" y="1" width="1398" height="638" rx="31" fill="none" stroke="#fff" stroke-opacity=".08"/>
+<text x="76" y="92" fill="#79695b" font-family="ui-monospace,monospace" font-size="15" letter-spacing="4">03 / MOTION LAB</text>
+<text x="76" y="210" fill="#faf7f3" font-family="Inter,system-ui,sans-serif" font-size="84" font-weight="800" letter-spacing="-4">GSAP / SCROLL</text>
+<text x="80" y="268" fill="#b4aaa3" font-family="Inter,system-ui,sans-serif" font-size="24">timing × stagger × scrub</text>
+<text x="80" y="340" fill="#857b74" font-family="Inter,system-ui,sans-serif" font-size="18">timeline choreography · directional reveals · scroll-linked motion systems</text>
+<g transform="translate(80 406)"><rect width="136" height="42" rx="21" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".07"/><text x="68" y="27" text-anchor="middle" fill="#d8cec8" font-family="ui-monospace,monospace" font-size="12">GSAP</text></g>
+<g transform="translate(228 406)"><rect width="190" height="42" rx="21" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".07"/><text x="95" y="27" text-anchor="middle" fill="#d8cec8" font-family="ui-monospace,monospace" font-size="12">SCROLLTRIGGER</text></g>
+<g transform="translate(430 406)"><rect width="160" height="42" rx="21" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".07"/><text x="80" y="27" text-anchor="middle" fill="#d8cec8" font-family="ui-monospace,monospace" font-size="12">TIMELINES</text></g>
+<g transform="translate(860 128)">
+<line x1="0" y1="236" x2="430" y2="236" stroke="#fff" stroke-opacity=".08"/>
+<line x1="0" y1="106" x2="430" y2="106" stroke="#fff" stroke-opacity=".05"/>
+<path d="M0 236C61 236 44 103 116 103C190 103 158 236 232 236C306 236 286 84 362 84C394 84 408 117 430 151" fill="none" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+<g fill="#111014" stroke="#ff9b52"><circle cx="116" cy="103" r="9"/><circle cx="232" cy="236" r="9"/><circle cx="362" cy="84" r="9"/></g>
+<rect x="44" y="270" width="66" height="9" rx="4.5" fill="#ff9b52" fill-opacity=".7"/><rect x="126" y="270" width="104" height="9" rx="4.5" fill="#ff9b52" fill-opacity=".4"/><rect x="246" y="270" width="56" height="9" rx="4.5" fill="#9b87f5" fill-opacity=".55"/><rect x="318" y="270" width="98" height="9" rx="4.5" fill="#9b87f5" fill-opacity=".3"/>
+</g>
+<line x1="80" y1="548" x2="1320" y2="548" stroke="url(#accent)" stroke-opacity=".42"/>
+<text x="80" y="584" fill="#675d57" font-family="ui-monospace,monospace" font-size="12" letter-spacing="2">SANKALPVOID / MOTION STUDY</text>
+<text x="1320" y="584" text-anchor="end" fill="#7b6555" font-family="ui-monospace,monospace" font-size="12" letter-spacing="2">TIME THE INTERFACE</text>
+</svg>
