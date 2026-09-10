@@ -8,6 +8,8 @@
 
 A motion-focused landing-page study built to understand sequencing, stagger, scrub and scroll-triggered choreography.
 
+[**Live Demo ↗**](https://gsap-motion.vercel.app/)
+
 The project uses **GSAP timelines** for the opening sequence and **ScrollTrigger** for section-based animation. Navigation, hero content, brand marks and service cards enter with coordinated timing instead of isolated effects.
 
 ## What I explored
