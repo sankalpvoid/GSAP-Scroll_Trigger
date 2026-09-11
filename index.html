@@ -9,87 +9,93 @@
   <meta property="og:description" content="A motion-focused landing-page experiment built with GSAP timelines and ScrollTrigger." />
   <meta property="og:type" content="website" />
   <title>GSAP Scroll Trigger — Motion Study</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <section class="section1">
     <nav>
-      <h1><i class="ri-shining-2-fill"></i> WizardZ</h1>
+      <h1><i class="ri-shining-2-fill" aria-hidden="true"></i> WizardZ</h1>
       <div class="part-2">
-        <h4>About Us</h4>
-        <h4>Services</h4>
-        <h4>Use Cases</h4>
-        <h4>Pricing</h4>
-        <h4>Blog</h4>
-        <button>Request a Quote</button>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#services">Use Cases</a>
+        <a href="#services">Pricing</a>
+        <a href="#services">Blog</a>
+        <button type="button">Request a Quote</button>
       </div>
     </nav>
-    <div class="center">
+
+    <div class="center" id="about">
       <div class="center-part-1">
         <h1>Navigating the digital landscape for success</h1>
-        <p>Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation</p>
-        <button>Book a Consultation</button>
+        <p>Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
+        <button type="button">Book a Consultation</button>
       </div>
-      <div class="center-part-2"><img src="./marketing-illustration_878233-772.avif" alt="" srcset=""></div>
+      <div class="center-part-2">
+        <img src="./marketing-illustration_878233-772.avif" alt="Abstract digital marketing illustration">
+      </div>
     </div>
-    <div class="section1bottom">
-      <img src="./Img/amazon.png" alt="">
-      <img src="./Img/dribbble.jpg" alt="">
-      <img src="./Img/hubspot.png" alt="">
-      <img src="./Img/notion.png" alt="">
-      <img src="./Img/netflix.png" alt="">
-      <img src="./Img/zoom.png" alt="">
+
+    <div class="section1bottom" aria-label="Selected client logos">
+      <img src="./Img/amazon.png" alt="Amazon">
+      <img src="./Img/dribbble.jpg" alt="Dribbble">
+      <img src="./Img/hubspot.png" alt="HubSpot">
+      <img src="./Img/notion.png" alt="Notion">
+      <img src="./Img/netflix.png" alt="Netflix">
+      <img src="./Img/zoom.png" alt="Zoom">
     </div>
   </section>
-  <section class="section2">
+
+  <section class="section2" id="services">
     <div class="services">
-      <h3>Services</h3>
-      <p>At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:</p>
+      <h2>Services</h2>
+      <p>At our digital marketing agency, we offer a range of services to help businesses grow and succeed online.</p>
     </div>
+
     <div class="container">
-      <div class="elem line1 left">
+      <article class="elem line1 left">
         <div class="elem-part1">
-          <h2>Search Engine Optimization</h2>
-          <h4><i class="ri-arrow-right-up-line"></i> Learn More</h4>
+          <h3>Search Engine Optimization</h3>
+          <a href="#services"><i class="ri-arrow-right-up-line" aria-hidden="true"></i> Learn More</a>
         </div>
         <div class="elem-part2">
-          <img src="marketing-illustration_878233-772.avif" alt="">
+          <img src="marketing-illustration_878233-772.avif" alt="Search engine optimization illustration">
         </div>
-      </div>
-      <div class="elem black line1 right">
+      </article>
+
+      <article class="elem black line1 right">
         <div class="elem-part1">
-          <h2>Pay per click Advertising</h2>
-          <h4><i class="ri-arrow-right-up-line"></i> Learn More</h4>
+          <h3>Pay-per-click Advertising</h3>
+          <a href="#services"><i class="ri-arrow-right-up-line" aria-hidden="true"></i> Learn More</a>
         </div>
         <div class="elem-part2">
-          <img src="marketing-illustration_878233-772.avif" alt="">
-        </div>        
-      </div>
-      <div class="elem  black line2 left">
+          <img src="marketing-illustration_878233-772.avif" alt="Pay-per-click advertising illustration">
+        </div>
+      </article>
+
+      <article class="elem black line2 left">
         <div class="elem-part1">
-          <h2>Social Media Marketing</h2>
-          <h4><i class="ri-arrow-right-up-line"></i> Learn More</h4>
+          <h3>Social Media Marketing</h3>
+          <a href="#services"><i class="ri-arrow-right-up-line" aria-hidden="true"></i> Learn More</a>
         </div>
         <div class="elem-part2">
-          <img src="marketing-illustration_878233-772.avif" alt="">
+          <img src="marketing-illustration_878233-772.avif" alt="Social media marketing illustration">
         </div>
-      </div>
-      <div class="elem line2 right">
+      </article>
+
+      <article class="elem line2 right">
         <div class="elem-part1">
-          <h2>E-mail Marketing</h2>
-          <h4><i class="ri-arrow-right-up-line"></i> Learn More</h4>
+          <h3>Email Marketing</h3>
+          <a href="#services"><i class="ri-arrow-right-up-line" aria-hidden="true"></i> Learn More</a>
         </div>
         <div class="elem-part2">
-          <img src="marketing-illustration_878233-772.avif" alt="">
-        </div>        
-      </div>
+          <img src="marketing-illustration_878233-772.avif" alt="Email marketing illustration">
+        </div>
+      </article>
     </div>
   </section>
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="script.js"></script>
