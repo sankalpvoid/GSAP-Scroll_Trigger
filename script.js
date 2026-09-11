@@ -1,90 +1,102 @@
-function page1Animation(){
-  var tl = gsap.timeline()
+gsap.registerPlugin(ScrollTrigger);
 
-tl.from("nav h1, nav h4, nav button", {
-  y:-40,
-  opacity:0,
-  delay:0.5,
-  duration:0.5,
-  stagger:0.15,
-})
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-tl.from(".center-part-1 h1", {
-  x:-200,
-  opacity:0,
-  duration:0.5
-},"-=0.3")
-tl.from(".center-part-2 img", {
-  x:+100,
-  opacity:0,
-  duration:0.8,
-},"-=0.2")
-tl.from(".center-part-1 p", {
-  x:-100,
-  opacity:0,
-  duration:0.4
-},"-=0.5")
-tl.from(".center-part-1 button", {
-  opacity:0,
-  duration:0.4
-})
+function page1Animation() {
+  if (prefersReducedMotion) return;
 
-tl.from(".section1bottom img", {
-  y:30,
-  opacity:0,
-  // delay:0.5,
-  duration:0.4,
-  stagger:0.15,
-})
+  const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
+
+  tl.from('nav h1, nav a, nav button', {
+    y: -28,
+    opacity: 0,
+    delay: 0.25,
+    duration: 0.45,
+    stagger: 0.08,
+  })
+    .from('.center-part-1 h1', {
+      x: -80,
+      opacity: 0,
+      duration: 0.55,
+    }, '-=0.2')
+    .from('.center-part-2 img', {
+      x: 60,
+      opacity: 0,
+      duration: 0.65,
+    }, '-=0.35')
+    .from('.center-part-1 p', {
+      x: -45,
+      opacity: 0,
+      duration: 0.4,
+    }, '-=0.35')
+    .from('.center-part-1 button', {
+      y: 14,
+      opacity: 0,
+      duration: 0.35,
+    }, '-=0.15')
+    .from('.section1bottom img', {
+      y: 18,
+      opacity: 0,
+      duration: 0.35,
+      stagger: 0.08,
+    }, '-=0.05');
 }
+
+function section2Animation() {
+  if (prefersReducedMotion) return;
+
+  ScrollTrigger.matchMedia({
+    '(min-width: 721px)': function () {
+      const st = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.section2',
+          start: 'top 72%',
+          end: 'top 12%',
+          scrub: 1.2,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      st.from('.services', {
+        x: -80,
+        opacity: 0,
+      })
+        .from('.elem.line1.left', {
+          x: -100,
+          opacity: 0,
+        })
+        .from('.elem.line1.right', {
+          x: 100,
+          opacity: 0,
+        }, '<')
+        .from('.elem.line2.left', {
+          x: -100,
+          opacity: 0,
+        })
+        .from('.elem.line2.right', {
+          x: 100,
+          opacity: 0,
+        }, '<');
+    },
+
+    '(max-width: 720px)': function () {
+      gsap.from('.services, .elem', {
+        y: 40,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.12,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: '.section2',
+          start: 'top 82%',
+          toggleActions: 'play none none none',
+        },
+      });
+    },
+  });
+}
+
 page1Animation();
+section2Animation();
 
-var st = gsap.timeline({
-  scrollTrigger:{
-    trigger:".section2",
-    scroller:"body",
-    // markers:true,
-    start:"top 60%",
-    scrub:2,
-    end:"top 0"
-  }
-})
-st.from(".services", {
-  x:-300,
-  opacity:0,
-  duration:0.5,
-})
-st.from(".elem.line1.left",{
-  x:-300,
-  opacity:0,
-  duration:1,
-})
-st.from(".elem.line1.right",{
-  x:300,
-  opacity:0,
-  duration:1,
-},"-=0.8")
-st.from(".elem.line2.left",{
-  x:-300,
-  opacity:0,
-  duration:1,
-})
-st.from(".elem.line2.right",{
-  x:300,
-  opacity:0,
-  duration:1,
-},"-=0.8")
-
-
-// st.from(".elem.line1.left",{
-//   x:-300,
-//   opacity:0,
-//   duration:1,
-// },"anim")
-// st.from(".elem.line1.right",{
-//   x:300,
-//   opacity:0,
-//   duration:1,
-// },"anim")
-
-//this is to make them run both together. add the same random name to both of them
+window.addEventListener('load', () => ScrollTrigger.refresh());
